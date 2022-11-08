@@ -1,6 +1,5 @@
 import React from 'react'
 
-import heroMobile from './images/hero-mobile.jpg'
 import logo from './images/logo.svg'
 import arrowIcon from './images/icon-arrow.svg'
 
@@ -18,7 +17,7 @@ function App() {
         <div className='base__content-info'>
           <div>
             <h1 className='base__content-info_title'>
-              We´re
+              We're
               <br />
               <span>coming soon</span>
             </h1>
@@ -30,12 +29,19 @@ function App() {
           </div>
           <div>
             <form onSubmit={handleSubmit} className='base__content-info_form'>
-              <input
-                type='text'
-                placeholder='Email Address'
-                className='base__content-info_form_input'
-                autoComplete='off'
-              />
+              <div className='base__content-info_form_container'>
+                <input
+                  type='text'
+                  placeholder='Email Address'
+                  className='base__content-info_form_input'
+                  autoComplete='off'
+                  id='email'
+                />
+                <label
+                  className='base__content-info_form_label'
+                  htmlFor='email'
+                />
+              </div>
               <button className='base__content-info_form_btn' type='submit'>
                 <img
                   className='base__content-info_form_btn_icon'
@@ -47,15 +53,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className='base__image'>
-        <picture className='base__image-picture'>
-          <img
-            className='base__image-img'
-            src={heroMobile}
-            alt='Reference image'
-          />
-        </picture>
-      </section>
+      <section className='base__image' />
     </main>
   )
 }
