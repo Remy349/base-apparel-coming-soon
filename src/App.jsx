@@ -20,7 +20,7 @@ function App() {
     } else if (!emailRegex.test(email)) {
       setMessage('Please provide a valid email')
     } else {
-      window.alert('Thanks for subscribing 👻')
+      window.alert('Thanks for subscribing ❤️')
 
       setMessage('')
       setEmail('')
