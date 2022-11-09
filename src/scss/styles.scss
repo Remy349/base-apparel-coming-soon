@@ -19,6 +19,14 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .base  {
   display: grid;
   min-height: 100vh;
@@ -71,6 +79,10 @@ body {
       &_form {
         position: relative;
 
+        &_container {
+          position: relative;
+        }
+
         &_input {
           width: 100%;
           padding: 1rem 6rem 1rem 1rem;
@@ -79,6 +91,20 @@ body {
           border-radius: 2rem;
           outline: none;
           border: 1px solid $Desaturated-Red;
+        }
+
+        &_label {
+          position: absolute;
+          color: $Soft-Red;
+          top: 4rem;
+          left: 1rem;
+          font-size: .9rem;
+        }
+
+        &_error {
+          position: absolute;
+          top: .7rem;
+          right: 5rem;
         }
 
         &_btn {
@@ -193,6 +219,11 @@ body {
           &_input {
             padding: 1.1rem 6rem 1.1rem 1.5rem;
             font-size: 1.2rem;
+          }
+
+          &_error {
+            right: 7rem;
+            top: 1rem;
           }
 
           &_btn {
